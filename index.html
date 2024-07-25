@@ -6,6 +6,7 @@
     <title>PH-A2</title>
     <link rel="stylesheet" href="./assets/styles/main.css" />
   </head>
+
   <body>
     <header class="root-header">
       <section class="nav">
@@ -45,6 +46,21 @@
               </svg>
             </button>
 
+            <ul class="navbar__links">
+              <li class="navbar__item">
+                <a href="#home" class="navbar__link active">Home</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#service" class="navbar__link">Service</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#contact" class="navbar__link">Contact</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#about" class="navbar__link">About</a>
+              </li>
+            </ul>
+
             <!-- <svg class="icon" width="100" height="100">
           <use href="#mobile-menu"></use>
         </svg> -->
@@ -52,22 +68,65 @@
         </div>
       </section>
       <section class="hero">
-        <div class="conteiner">
-          <h1 class="hero__heading">
-            Get body in <span class="fashion">shape</span> & stay healthy
-          </h1>
-          
-          <p class="hero__subtitle">
-            A huge selection of health and fitness content, healthy recipes and
-            transformation stories to help you get fit and stay fit!
-          </p>
+        <div class="container">
+          <div class="hero__details">
+            <h1 class="hero__heading">
+              Get body in <br />
+              <span class="fashion">shape</span> & stay healthy
+            </h1>
 
-          <div class="hero__cta-btn-group">
-            <button class="cta-btn">Join Now!</button>
-            <button class="cta-btn">Download App</button>
+            <p class="hero__subtitle">
+              A huge selection of health and fitness content, healthy recipes
+              and transformation stories to help you get fit and stay fit!
+            </p>
+            <div class="hero__cta-btn-group">
+              <a href="#" class="cta-btn">Join Now!</a>
+              <a href="#" class="cta-btn outlined">Download App</a>
+            </div>
+          </div>
+          <div class="hero__poster">
+            <figure class="model">
+              <img src="./assets/images/hero-model.png" alt="model" />
+            </figure>
+
+            <!-- floating cards -->
+            <div class="floating-card card-1">
+              <span class="floating-card__details">
+                <h1 class="heading">500+</h1>
+                <span class="subtitle">Free Workout Videos</span>
+              </span>
+            </div>
+
+            <div class="floating-card card-2">
+              <figure class="floating-card__icon">
+                <svg
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="15.5085"
+                    cy="15.6736"
+                    r="15.1203"
+                    fill="#E6533C"
+                  />
+                  <path
+                    d="M23.0687 15.6737L11.7285 22.2209V9.12639L23.0687 15.6737Z"
+                    fill="#FAFAF9"
+                  />
+                </svg>
+              </figure>
+              <span class="floating-card__details">
+                <h1 class="heading">350+</h1>
+                <span class="subtitle">Video tutorial</span>
+              </span>
+            </div>
           </div>
         </div>
       </section>
     </header>
+    <main>
+      
+    </main>
   </body>
 </html>

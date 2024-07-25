@@ -1,10 +1,12 @@
+/* fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-.container {
-  width: 100%;
-  padding-inline: 1rem;
+@font-face {
+  font-family: "Miama";
+  src: url("../fonts/Miama.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-
-/* Reset */
+/* reset */
 *,
 *:before,
 *:after {
@@ -28,6 +30,7 @@ svg {
   fill: inherit;
   stroke: inherit;
   max-width: 100%;
+  height: -webkit-fill-available;
 }
 
 /* base */
@@ -37,9 +40,38 @@ body {
   background-color: #000;
   color: #fff;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
+/* common */
+.container {
+  width: 100%;
+  padding-inline: 1rem;
+  margin: 0 auto;
+}
+
+/* buttons */
+.cta-btn {
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 1rem 1.875rem;
+  border-radius: 3.125rem;
+  color: #fff;
+  background-color: #e6533c;
+  text-align: center;
+}
+.cta-btn.outlined {
+  background-color: transparent;
+  border: 0.0625rem solid #fff;
+}
+
+/* header */
+.root-header {
+  background-image: linear-gradient(to bottom, #111111, rgba(119, 119, 119, 0.3647058824));
+}
 .root-header .nav {
-  margin-block: 3.25rem;
+  padding-block: 3.25rem;
 }
 .root-header .nav .navbar {
   display: flex;
@@ -61,7 +93,165 @@ body {
 .root-header .nav .navbar__toggle__icon {
   width: 100%;
 }
+.root-header .nav .navbar__links {
+  list-style-type: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  display: flex;
+  gap: 2.9375rem;
+  border: 0.0625rem solid #2e2e2e;
+  padding: 0.25rem;
+  border-radius: 1.875rem;
+  display: none;
+}
+.root-header .nav .navbar__link {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1.25rem;
+}
+.root-header .nav .navbar__link.active {
+  background-color: #e6533c;
+}
+.root-header .hero__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
 .root-header .hero__heading {
   font-size: 2.25rem;
   font-weight: 900;
+  line-height: 120%;
+}
+.root-header .hero__heading .fashion {
+  font-family: "Miama", sans-serif;
+  font-size: 5rem;
+  font-weight: 100;
+}
+.root-header .hero__subtitle {
+  color: #909090;
+  line-height: 1.5rem;
+  letter-spacing: 0.03125rem;
+}
+.root-header .hero__cta-btn-group {
+  display: flex;
+  gap: 0.875rem;
+}
+.root-header .hero__cta-btn-group .cta-btn {
+  flex-basis: 50%;
+  padding-inline: 0;
+  max-width: 14rem;
+}
+.root-header .hero__poster {
+  position: relative;
+}
+.root-header .hero__poster .model {
+  width: 100%;
+  display: flex;
+}
+.root-header .hero__poster .model img {
+  width: 100%;
+}
+.root-header .hero__poster .floating-card {
+  position: absolute;
+  top: 3.125rem;
+  right: 0.625rem;
+}
+.root-header .hero__poster .floating-card.card-2 {
+  right: unset;
+  top: 40%;
+  left: 15%;
+}
+
+/* floating card */
+.floating-card {
+  width: max-content;
+  background-color: rgba(255, 255, 255, 0.1019607843);
+  padding: 0.9375rem 1.25rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1019607843);
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.floating-card__icon {
+  width: 2.1875rem;
+  aspect-ratio: 1/1;
+}
+.floating-card__details h1 {
+  font-size: 1.89rem;
+  font-weight: 900;
+}
+.floating-card__details .subtitle {
+  font-size: 0.614375rem;
+  letter-spacing: 0.0475rem;
+  color: rgba(255, 255, 255, 0.6509803922);
+}
+
+/* habit */
+.habit__header .title {
+  font-size: 2rem;
+  font-weight: 900;
+}
+/* media queries*/
+/*----- Small And Above --------*/
+@media screen and (min-width: 36em) {
+  .container {
+    max-width: 33.75rem;
+    padding-inline: 0rem;
+  }
+}
+/*----- Medium And Above --------*/
+@media screen and (min-width: 48em) {
+  .container {
+    max-width: 45rem;
+  }
+}
+/*----- large And Above --------*/
+@media screen and (min-width: 62em) {
+  .container {
+    max-width: 60rem;
+  }
+  .root-header .nav .navbar__toggle {
+    display: none;
+  }
+  .root-header .nav .navbar__links {
+    display: flex;
+  }
+  .root-header .hero .container {
+    display: flex;
+    gap: 5.5rem;
+    align-items: center;
+  }
+  .root-header .hero .container .hero__details {
+    flex-basis: 60%;
+  }
+  .root-header .hero .container .hero__heading {
+    font-size: 4.875rem;
+  }
+  .root-header .hero .container .hero__heading .fashion {
+    font-size: 9.0625rem;
+  }
+  .root-header .hero .container .hero__poster {
+    flex-basis: 40%;
+    height: 36.25rem;
+  }
+  .root-header .hero .container .hero__poster img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+  .root-header .hero .container .hero__poster .floating-card {
+    top: 28.5%;
+    right: 4.5%;
+  }
+  .root-header .hero .container .hero__poster .floating-card.card-2 {
+    top: unset;
+    left: -17.5%;
+    bottom: 12.5%;
+  }
+}
+@media screen and (min-width: 75em) {
+  .container {
+    max-width: 71.25rem;
+  }
 }
