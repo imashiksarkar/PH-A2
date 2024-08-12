@@ -219,10 +219,89 @@
             <img src="./assets/images/exercise6.jpg" alt="exercise-6" />
             <p class="title">Step-Ups: Engages quads, hamstrings, and glutes, improving balance and coordination.</p>
           </div>
-
         </div>
       </div>
     </section>
+
+    <!-- BMI Section -->
+    <section class="bmi">
+      <div class="container">
+        <h1 class="bmi__heading">BMI Calculator</h1>
+        <p class="bmi__subtitle">
+          We believe fitness should be accessible to everyone, everywhere,
+          regardless of income or access to a gym.
+        </p>
+      </div>
+
+      <div class="bmi__main">
+        <div class="container">
+          <div class="bmi__chart">
+            <h3 class="chart__heading">BMI Calculator Chart</h3>
+
+            <table class="bmi__table">
+              <thead>
+                <tr>
+                  <th class="bmi__table__header">BMI</th>
+                  <th class="bmi__table__header">Weight Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td class="bmi__table__cell">Below 18.5</td>
+                  <td class="bmi__table__cell">Underweight</td>
+                </tr>
+                <tr>
+                  <td class="bmi__table__cell">18.5 - 24.9</td>
+                  <td class="bmi__table__cell">Healthy</td>
+                </tr>
+                <tr>
+                  <td class="bmi__table__cell">25.0 - 29.9</td>
+                  <td class="bmi__table__cell">Overweight</td>
+                </tr>
+                <tr>
+                  <td class="bmi__table__cell">30.0 - and Above</td>
+                  <td class="bmi__table__cell">Obese</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="bmi__calculator">
+            <h3 class="calculator__heading">Calculate your BMI</h3>
+            <p class="calculator__subtitle">
+              We believe fitness should be accessible to everyone, everywhere,
+              regardless of income or access to a gym.
+            </p>
+
+            <form class="bmi__calculator__form">
+              <input placeholder="Height/cm" type="number" name="height" class="bmi__input" />
+              <input placeholder="Weight/kg" type="number" name="weight" class="bmi__input" />
+
+              <input placeholder="Age" type="number" name="age" class="bmi__input" />
+              <select name="gender" class="bmi__input">
+                <option value="0" disabled selected class="select__placeholder">Sex</option>
+                <option value="male">Male</option>
+                <option value="male">Female</option>
+              </select>
+
+              <select name="activity" class="bmi__input activity__input">
+                <option value="0" disabled selected>Select an activity factor</option>
+                <option value="1.2">Sedentary</option>
+                <option value="1.357">Lightly Active</option>
+                <option value="1.55">Moderately Active</option>
+                <option value="1.752">Very Active</option>
+                <option value="1.9">Extra Active</option>
+              </select>
+
+              <button type="submit" class="submit__btn cta-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
   </main>
 </body>
 
