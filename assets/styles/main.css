@@ -568,60 +568,6 @@ button {
   color: #8b9196;
 }
 
-/* footer */
-.footer {
-  padding-top: 4.375rem;
-  background-color: #191919;
-}
-.footer .container {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: start;
-  gap: 2.5rem 5rem;
-}
-.footer .details .logo {
-  font-size: 4.375rem;
-  font-weight: 800;
-  font-style: italic;
-  color: #e6533c;
-}
-.footer .details .subtitle {
-  color: #8c8c8c;
-  line-height: 1.5rem;
-  letter-spacing: 0.01875rem;
-  margin-top: 0.625rem;
-  font-size: 0.875rem;
-}
-.footer .about-links,
-.footer .services-links {
-  color: #8c8c8c;
-}
-.footer .about-links .heading,
-.footer .services-links .heading {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 700;
-}
-.footer .about-links .footer__links,
-.footer .services-links .footer__links {
-  margin-top: 1.5625rem;
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.9375rem;
-}
-.footer__link {
-  font-size: 1.4375rem;
-  font-weight: 400;
-}
-.footer .copyright {
-  padding-block: 1.875rem;
-  font-size: 1.25rem;
-  text-align: center;
-  border-top: 0.125rem solid #303030;
-  color: #8c8c8c;
-}
-
 /* pricing-table */
 .pricing-table {
   background-color: #37383c;
@@ -747,6 +693,60 @@ button {
 }
 .pricing-table .pricing-box-group .fetaure {
   font-weight: 400;
+}
+
+/* footer */
+.footer {
+  padding-top: 4.375rem;
+  background-color: #191919;
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 2.5rem 5rem;
+}
+.footer .details .logo {
+  font-size: 4.375rem;
+  font-weight: 800;
+  font-style: italic;
+  color: #e6533c;
+}
+.footer .details .subtitle {
+  color: #8c8c8c;
+  line-height: 1.5rem;
+  letter-spacing: 0.01875rem;
+  margin-top: 0.625rem;
+  font-size: 0.875rem;
+}
+.footer .about-links,
+.footer .services-links {
+  color: #8c8c8c;
+}
+.footer .about-links .heading,
+.footer .services-links .heading {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.footer .about-links .footer__links,
+.footer .services-links .footer__links {
+  margin-top: 1.5625rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+.footer__link {
+  font-size: 1.4375rem;
+  font-weight: 400;
+}
+.footer .copyright {
+  padding-block: 1.875rem;
+  font-size: 1.25rem;
+  text-align: center;
+  border-top: 0.125rem solid #303030;
+  color: #8c8c8c;
 }
 
 /* media queries*/
