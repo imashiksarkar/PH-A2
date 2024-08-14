@@ -1,0 +1,7 @@
+@use '../utils' as u;
+
+.container {
+  width: 100%;
+  padding-inline: u.rem(16);
+  margin: 0 auto;
+}

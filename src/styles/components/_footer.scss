@@ -1,0 +1,59 @@
+@use '../utils' as u;
+
+.footer {
+  padding-top: u.rem(70);
+  background-color: #191919;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: u.rem(40) u.rem(80);
+  }
+
+  .details {
+    .logo {
+      font-size: u.rem(70);
+      font-weight: 800;
+      font-style: italic;
+      color: #e6533c;
+    }
+    .subtitle {
+      color: #8c8c8c;
+      line-height: u.rem(24);
+      letter-spacing: u.rem(0.3);
+      margin-top: u.rem(10);
+      font-size: u.rem(14);
+    }
+  }
+
+  .about-links,
+  .services-links {
+    color: #8c8c8c;
+
+    .heading {
+      color: #fff;
+      font-size: u.rem(32);
+      font-weight: 700;
+    }
+
+    .footer__links {
+      margin-top: u.rem(25);
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: u.rem(15);
+    }
+  }
+  &__link {
+    font-size: u.rem(23);
+    font-weight: 400;
+  }
+  .copyright {
+    padding-block: u.rem(30);
+    font-size: u.rem(20);
+    text-align: center;
+    border-top: u.rem(2) solid #303030;
+    color: #8c8c8c;
+  }
+}

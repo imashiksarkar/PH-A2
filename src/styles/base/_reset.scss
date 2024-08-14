@@ -1,0 +1,56 @@
+@use '../utils' as u;
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+}
+
+svg {
+  width: u.rem(50);
+  fill: inherit;
+  stroke: inherit;
+  max-width: 100%;
+  height: -webkit-fill-available;
+}
+
+input,
+select {
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+/* Hide arrows in WebKit browsers */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide arrows in Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+img {
+  width: 100%;
+}

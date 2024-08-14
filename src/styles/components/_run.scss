@@ -1,0 +1,52 @@
+@use '../utils' as u;
+
+.run {
+  .container {
+    padding-block: u.rem(50);
+  }
+
+  &__box {
+    padding: u.rem(33);
+    background-color: #222222;
+    border-radius: u.rem(18);
+
+    display: flex;
+    flex-direction: column;
+    gap: u.rem(32);
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: u.rem(34);
+      .heading {
+        font-size: u.rem(32);
+        font-weight: 900;
+        line-height: 120%;
+      }
+      .subtitle {
+        color: #909090;
+        font-size: u.rem(14);
+        line-height: u.rem(24);
+        letter-spacing: u.rem(0.3);
+      }
+      .cta-btn {
+        display: inline-block;
+        padding: u.rem(16) u.rem(72);
+      }
+    }
+
+    .dp {
+      width: 100%;
+      overflow: hidden;
+      border-radius: inherit;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-40%, 40%) scale(2.8);
+      }
+    }
+  }
+}

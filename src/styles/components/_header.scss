@@ -1,0 +1,9 @@
+@use 'navbar' as *;
+@use 'hero' as *;
+
+.root-header {
+  background-image: linear-gradient(to bottom, #111111, #7777775d);
+
+  @include navbar;
+  @include hero;
+}

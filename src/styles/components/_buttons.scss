@@ -1,0 +1,16 @@
+@use '../utils' as u;
+
+.cta-btn {
+  font-size: u.rem(18);
+  font-weight: 600;
+  padding: u.rem(16) u.rem(30);
+  border-radius: u.rem(50);
+  color: #fff;
+  background-color: #e6533c;
+  text-align: center;
+
+  &.outlined {
+    background-color: transparent;
+    border: u.rem(1) solid #fff;
+  }
+}

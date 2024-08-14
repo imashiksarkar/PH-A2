@@ -1,0 +1,33 @@
+@use '../utils' as u;
+
+.floating-card {
+  $color: #ffffff1a;
+
+  width: max-content;
+  background-color: $color;
+  padding: u.rem(15) u.rem(20);
+  border: u.rem(1) solid $color;
+  border-radius: u.rem(10);
+
+  display: flex;
+  align-items: center;
+  gap: u.rem(10);
+
+  &__icon {
+    width: u.rem(35);
+    aspect-ratio: 1 / 1;
+  }
+
+  &__details {
+    h1 {
+      font-size: u.rem(30.24);
+      font-weight: 900;
+    }
+
+    .subtitle {
+      font-size: u.rem(9.83);
+      letter-spacing: u.rem(0.76);
+      color: #ffffffa6;
+    }
+  }
+}

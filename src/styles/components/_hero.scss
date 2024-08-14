@@ -1,0 +1,59 @@
+@use '../utils' as u;
+
+@mixin hero {
+  .hero {
+    &__details {
+      display: flex;
+      flex-direction: column;
+      gap: u.rem(28);
+    }
+    &__heading {
+      font-size: u.rem(36);
+      font-weight: 900;
+      line-height: 120%;
+      .fashion {
+        font-family: 'Miama', sans-serif;
+        font-size: u.rem(80);
+        font-weight: 100;
+      }
+    }
+    &__subtitle {
+      color: #909090;
+      line-height: u.rem(24);
+      letter-spacing: u.rem(0.5);
+    }
+    &__cta-btn-group {
+      display: flex;
+      gap: u.rem(14);
+
+      .cta-btn {
+        flex-basis: 50%;
+        padding-inline: 0;
+        max-width: u.rem(224);
+      }
+    }
+
+    &__poster {
+      position: relative;
+      .model {
+        width: 100%;
+        display: flex;
+        img {
+          width: 100%;
+        }
+      }
+
+      .floating-card {
+        position: absolute;
+        top: u.rem(50);
+        right: u.rem(10);
+
+        &.card-2 {
+          right: unset;
+          top: 40%;
+          left: 15%;
+        }
+      }
+    }
+  }
+}

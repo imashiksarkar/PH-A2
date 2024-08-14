@@ -1,0 +1,56 @@
+@use '../utils' as u;
+
+@mixin navbar {
+  .nav {
+    padding-block: u.rem(52);
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__brand {
+        font-size: u.rem(36);
+        font-weight: 800;
+        font-style: italic;
+        color: #e6533c;
+      }
+
+      &__toggle {
+        background-color: transparent;
+        stroke: #ffffff;
+        width: u.rem(24);
+        aspect-ratio: 1 / 1;
+
+        &__icon {
+          width: 100%;
+        }
+      }
+
+      // desktop links
+      &__links {
+        list-style-type: none;
+        font-size: u.rem(18);
+        font-weight: 600;
+
+        display: flex;
+        gap: u.rem(47);
+
+        border: u.rem(1) solid #2e2e2e;
+        padding: u.rem(4);
+        border-radius: u.rem(30);
+
+        display: none;
+      }
+
+      &__link {
+        display: inline-block;
+        padding: u.rem(8) u.rem(20);
+        border-radius: u.rem(20);
+
+        &.active {
+          background-color: #e6533c;
+        }
+      }
+    }
+  }
+}

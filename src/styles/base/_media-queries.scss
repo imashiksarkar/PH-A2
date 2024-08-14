@@ -1,0 +1,227 @@
+@use '../utils' as u;
+
+/* media queries*/
+
+/*----- Small And Above --------*/
+@media screen and (min-width: u.em(576)) {
+  .container {
+    max-width: u.rem(540);
+    padding-inline: u.rem(0);
+  }
+
+  // Team Section
+  .team {
+    &__members {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .box {
+      &__details {
+        .trainer__name {
+          font-size: u.rem(16);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  // Pricing Table Section
+  .pricing-table {
+    .pricing-box-group {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+/*----- Medium And Above --------*/
+@media screen and (min-width: u.em(768)) {
+  .container {
+    // padding-inline: u.rem(24);
+    max-width: u.rem(720);
+  }
+
+  // Team Section
+  .team {
+    .box {
+      &__details {
+        .trainer__name {
+          font-size: u.rem(20);
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}
+
+/*----- Large And Above --------*/
+@media screen and (min-width: u.em(992)) {
+  .container {
+    // padding-inline: u.rem(32);
+    max-width: u.rem(960);
+  }
+
+  // Header
+  .root-header {
+    .nav {
+      .navbar {
+        &__toggle {
+          display: none;
+        }
+
+        &__links {
+          display: flex;
+        }
+      }
+    }
+
+    .hero {
+      .container {
+        display: flex;
+        gap: u.rem(88);
+        align-items: center;
+        .hero {
+          &__details {
+            flex-basis: 60%;
+          }
+
+          &__heading {
+            font-size: u.rem(78);
+
+            .fashion {
+              font-size: u.rem(145);
+            }
+          }
+
+          &__poster {
+            flex-basis: 40%;
+            height: u.rem(580);
+
+            img {
+              height: 100%;
+              width: auto;
+              object-fit: cover;
+            }
+
+            .floating-card {
+              top: 28.5%;
+              right: 4.5%;
+
+              &.card-2 {
+                top: unset;
+                left: -17.5%;
+                bottom: 12.5%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Habit Section
+  .habit {
+    .container {
+      padding-block: u.rem(100);
+    }
+
+    &__list {
+      flex-direction: row;
+    }
+  }
+
+  // Run Section
+  .run {
+    .container {
+      padding-block: u.rem(50);
+    }
+
+    &__box {
+      flex-direction: row;
+      gap: u.rem(165);
+
+      .details {
+        flex-basis: 60%;
+      }
+
+      .dp {
+        flex-basis: 40%;
+      }
+    }
+  }
+
+  // Exercise section
+  .exercise {
+    &__box {
+      &.box--1 {
+        flex-basis: 25%;
+      }
+
+      &.box--2 {
+        flex-basis: 50%;
+      }
+
+      &.box--3 {
+        flex-basis: 25%;
+      }
+
+      &.box--4 {
+        flex-basis: 40%;
+      }
+
+      &.box--5 {
+        flex-basis: 25%;
+      }
+
+      &.box--6 {
+        flex-basis: 35%;
+      }
+    }
+  }
+
+  // BMI Section
+  .bmi {
+    &__main {
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    &__calculator {
+      margin-top: 0;
+    }
+  }
+
+  // Team Section
+  .team {
+    &__members {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  // Pricing Table Section
+  .pricing-table {
+    .pricing-box-group {
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+    }
+  }
+
+  // Footer Section
+  .footer {
+    .container {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .copyright {
+      grid-column: 1 / span 3;
+    }
+  }
+}
+
+/* Extra-large And Above*/
+@media screen and (min-width: u.em(1200)) {
+  .container {
+    // padding-inline: u.rem(32);
+    max-width: u.rem(1140);
+  }
+}

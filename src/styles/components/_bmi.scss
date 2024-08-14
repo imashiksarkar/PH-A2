@@ -1,0 +1,105 @@
+@use '../utils' as u;
+
+.bmi {
+  & > .container {
+    margin-top: u.rem(30);
+  }
+
+  &__heading {
+    font-size: u.rem(32);
+    font-weight: 900;
+  }
+
+  &__subtitle {
+    margin-top: u.rem(14);
+    color: #808080;
+    line-height: u.rem(24);
+    letter-spacing: u.rem(0.3);
+  }
+
+  &__main {
+    margin-top: u.rem(32);
+    background-color: #222222;
+    .container {
+      padding-block: u.rem(34);
+    }
+  }
+
+  &__chart {
+    .chart__heading {
+      font-size: u.rem(16);
+      font-weight: 900;
+    }
+
+    .bmi__table {
+      margin-top: u.rem(23);
+      border-collapse: collapse;
+
+      &__header {
+        font-size: u.rem(16);
+        font-weight: 500;
+      }
+      &__cell {
+        color: #909090;
+      }
+
+      &__header,
+      &__cell {
+        text-align: left;
+        padding: u.rem(15) u.rem(20);
+        border: u.rem(1) solid #383838;
+      }
+    }
+  }
+
+  &__calculator {
+    margin-top: u.rem(42);
+
+    &__form {
+      margin-top: u.rem(34);
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: u.rem(12);
+
+      .activity__input {
+        grid-column: 1 / span 2;
+      }
+
+      .bmi__input {
+        padding: u.rem(12) u.rem(20);
+        color: #afafaf;
+        background-color: #383838;
+        border-radius: u.rem(8);
+
+        &::placeholder {
+          color: #afafaf;
+        }
+      }
+
+      select {
+        color: #afafaf;
+        background: url('../images/select-arrow.svg') no-repeat right u.rem(10)
+          center;
+        background-size: u.rem(30);
+      }
+
+      .submit__btn {
+        margin-top: u.rem(34 - 12);
+        padding: u.rem(16) u.rem(85);
+        grid-column: 1 / span 2;
+        justify-self: start;
+      }
+    }
+  }
+  .calculator__heading {
+    font-size: u.rem(16);
+    font-weight: 900;
+  }
+  .calculator__subtitle {
+    margin-top: u.rem(14);
+    color: #909090;
+    line-height: u.rem(24);
+    letter-spacing: u.rem(0.3);
+  }
+}
